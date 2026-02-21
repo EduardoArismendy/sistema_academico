@@ -9,7 +9,12 @@ class Home extends StatelessWidget {
     // Scaffold proporciona estructura visual básica: barra superior y cuerpo
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Inicio'), // Título de la barra superior
+        title: const Text('Home'), // Título de la barra superior
+        titleTextStyle: const TextStyle(
+          color: Colors.white, // Color del texto del título
+          fontSize: 20, // Tamaño del texto del título
+          fontWeight: FontWeight.bold, // Negrita para el título
+        ),
         backgroundColor: Theme.of(
           context,
         ).colorScheme.primary, // Color principal
@@ -39,14 +44,14 @@ class Home extends StatelessWidget {
             // ),
             // const SizedBox(height: 16), // Espacio entre botones
 
-            // Tercer botón simple
+            // Tercer botón
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.newspaper), // Icono a la izquierda
               label: const Text('Noticias institucionales'),
             ),
             const SizedBox(height: 16), // Espacio entre botones
-            // Cuarto botón simple
+            // Cuarto botón
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.school), // Icono a la izquierda
