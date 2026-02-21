@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/Home.dart'; // Importa la pantalla Home desde el archivo Home.dart
+import 'pages/Home.dart'; // Importar la pantalla Home desde la carpeta pages
 
 // Punto de entrada de la aplicación Flutter
 void main() {

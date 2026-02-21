@@ -29,6 +29,11 @@ class Home extends StatelessWidget {
               style: TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 20), // Espacio entre texto y primer botón
+
+            Image(
+              image: AssetImage('assets/images/undraw_welcome_re_h3d9.png'),
+            ), // Imagen de bienvenida
+            const SizedBox(height: 20), // Espacio entre imagen y botones
             // Primer botón simple
             ElevatedButton.icon(
               onPressed: () {},
