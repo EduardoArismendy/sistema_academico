@@ -14,13 +14,11 @@ class UserPageState extends State<UserPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Sistema Académico',
+          'Estudiante',
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
-        ),
+        iconTheme: const IconThemeData(color: Colors.white),
         actions: <Widget>[
           IconButton(
             icon: CircleAvatar(
@@ -35,7 +33,9 @@ class UserPageState extends State<UserPage> {
             tooltip: 'Cerrar sesión',
             onPressed: () {
               Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute<void>(builder: (context) => const LoginPage()),
+                MaterialPageRoute<void>(
+                  builder: (context) => const LoginPage(),
+                ),
                 (route) => false,
               );
             },
@@ -81,6 +81,42 @@ class UserPageState extends State<UserPage> {
               ],
               width: 350,
               label: Text('Selecciona una opción...'),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
+            child: Text(
+              'Escucha el nuevo podcast del ITM para estar al día con las últimas noticias y eventos académicos. Exclusivo para estudiantes, egresados y personal del ITM.',
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Card(
+              color: Theme.of(context).colorScheme.secondaryContainer,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.play_circle_outline, size: 40),
+                    title: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Podcast ITM - Episodio 1',
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
+                        SizedBox(height: 8),
+                      ],
+                    ),
+                    subtitle: Text(
+                      'En este episodio, exploramos las últimas noticias y eventos académicos del ITM, incluyendo entrevistas con estudiantes destacados y profesores. ¡No te lo pierdas!',
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'user.dart';
+import 'login.dart';
 
 // Widget Home: pantalla inicial
 class Home extends StatelessWidget {
@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (context) => const UserPage(),
+                    builder: (context) => const LoginPage(),
                   ),
                 );
               },
