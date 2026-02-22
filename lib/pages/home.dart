@@ -15,14 +15,17 @@ class Home extends StatelessWidget {
           fontSize: 20, // Tamaño del texto del título
           fontWeight: FontWeight.bold, // Negrita para el título
         ),
+
         backgroundColor: Theme.of(
           context,
         ).colorScheme.primary, // Color principal
       ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 5),
             // Texto de bienvenida
             const Text(
               '¡Bienvenido! ¿Qué deseas hacer hoy?',
@@ -30,8 +33,12 @@ class Home extends StatelessWidget {
             ),
             const SizedBox(height: 20), // Espacio entre texto y primer botón
 
-            Image(
-              image: AssetImage('assets/images/undraw_welcome_re_h3d9.png'),
+            Container(
+              padding: EdgeInsets.fromLTRB(100, 20, 100, 40),
+              width: 350, // Ancho del contenedor (ajustado para la imagen)
+              child: Image.network(
+                'https://upload.wikimedia.org/wikipedia/commons/c/ce/Logo-ITM-01.png',
+              ),
             ), // Imagen de bienvenida
             const SizedBox(height: 20), // Espacio entre imagen y botones
             // Primer botón simple
@@ -41,22 +48,14 @@ class Home extends StatelessWidget {
               label: const Text('Empezar'),
             ),
             const SizedBox(height: 16), // Espacio entre botones
-            // Segundo botón con icono
-            // ElevatedButton.icon(
-            //   onPressed: () {},
-            //   icon: const Icon(Icons.star), // Icono a la izquierda
-            //   label: const Text('Favorito'), // Texto del botón
-            // ),
-            // const SizedBox(height: 16), // Espacio entre botones
-
-            // Tercer botón
+            // Segundo botón
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.newspaper), // Icono a la izquierda
               label: const Text('Noticias institucionales'),
             ),
             const SizedBox(height: 16), // Espacio entre botones
-            // Cuarto botón
+            // tercer botón
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.school), // Icono a la izquierda
