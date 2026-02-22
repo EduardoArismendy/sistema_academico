@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'login.dart';
 
 class UserPage extends StatefulWidget {
   const UserPage({super.key});
@@ -19,7 +19,7 @@ class UserPageState extends State<UserPage> {
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
         iconTheme: const IconThemeData(
-          color: Colors.white, // Color de los íconos en la barra superior
+          color: Colors.white,
         ),
         actions: <Widget>[
           IconButton(
@@ -34,8 +34,9 @@ class UserPageState extends State<UserPage> {
             icon: Icon(Icons.logout, color: Colors.white),
             tooltip: 'Cerrar sesión',
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute<void>(builder: (context) => const Home()),
+              Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute<void>(builder: (context) => const LoginPage()),
+                (route) => false,
               );
             },
           ),
