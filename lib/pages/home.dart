@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'user.dart';
 
 // Widget Home: pantalla inicial
 class Home extends StatelessWidget {
@@ -43,9 +44,15 @@ class Home extends StatelessWidget {
             const SizedBox(height: 20), // Espacio entre imagen y botones
             // Primer botón simple
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const UserPage(),
+                  ),
+                );
+              },
               icon: const Icon(Icons.play_arrow), // Icono a la izquierda
-              label: const Text('Empezar'),
+              label: const Text('Iniciar sesión'),
             ),
             const SizedBox(height: 16), // Espacio entre botones
             // Segundo botón
